@@ -152,6 +152,26 @@ def rooster(x, y, length):
     parallelogram(x- 3/4*length, y +1/4*length, 1/3*length, 1/8*length, 'white', 'LimeGreen')
 
 
-rooster(225, 200, 150)
+#rooster(225, 200, 150)
+
+def helicopter(x, y, length):
+    parallelogram(x+1/5*length, y+ 1/4*length, 1/2.5*length, 1/6*length, 'white', 'LimeGreen')
+    turtle.left(135)
+    turtle.right(180)
+    hypotenuse_triangle(x+ 1/5*length, y- 1/2*length, 3/4*length, 'white', 'red')
+    turtle.right(180)
+    hypotenuse_triangle(x+1/5*length, y+1/4*length, 3/4*length,'white', 'yellow')
+    turtle.right(90)
+    hypotenuse_triangle(x+1/5*length, y+1/4*length, 1/2*length, 'white', 'blue')
+    turtle.left(45)
+    turtle.right(45)
+    leg_triangle(x,y-1/3.25*length, 1/4*length, 'white', 'purple')
+    turtle.right(180)
+    leg_triangle(x-1/1.875*length,y-1/8.5*length, 1/4*length, 'white', 'pink')
+    turtle.left(135)
+    square(x-1/1.5*length, y-1/4*length, 1/4*length, 'white', 'orange')
+
+helicopter(0, -175, 150)
+
 turtle.done()
 
