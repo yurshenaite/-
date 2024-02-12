@@ -136,6 +136,43 @@ def rabbit(x, y, length):
 
 rabbit(-175, 200, 95)
 
+def rooster(x, y, length):
+    square(x, y, 1/4*length, 'white', 'orange')
+    turtle.left(90)
+    hypotenuse_triangle(x + 1/4*1.5*length, y+1/4*length, 1/4*1.5*length,'white', 'blue')
+    turtle.left(45)
+    leg_triangle(x+ 1/4* length, y, 1/2*length, 'white', 'yellow')
+    turtle.left(45)
+    hypotenuse_triangle(x + 1/8*length, y - (1/2-(1.5*1/4))*length, 1.5*1/4*length, 'white', 'BlueViolet')
+    turtle.right(135)
+    leg_triangle(x- 1/4*length, y- 1/4*length, 1/2*length, 'white', 'magenta')
+    turtle.left(45)
+    hypotenuse_triangle(x- 1/4*length, y+ 1/4*length, 1/2*length, 'white', 'cyan')
+    turtle.left(180)
+    parallelogram(x- 3/4*length, y +1/4*length, 1/3*length, 1/8*length, 'white', 'LimeGreen')
+
+
+rooster(225, 200, 150)
+
+def helicopter(x, y, length):
+    parallelogram(x+1/5*length, y+ 1/4*length, 1/2.5*length, 1/6*length, 'white', 'LimeGreen')
+    turtle.left(135)
+    turtle.right(180)
+    hypotenuse_triangle(x+ 1/5*length, y- 1/2*length, 3/4*length, 'white', 'red')
+    turtle.right(180)
+    hypotenuse_triangle(x+1/5*length, y+1/4*length, 3/4*length,'white', 'yellow')
+    turtle.right(90)
+    hypotenuse_triangle(x+1/5*length, y+1/4*length, 1/2*length, 'white', 'blue')
+    turtle.left(45)
+    turtle.right(45)
+    leg_triangle(x,y-1/3.25*length, 1/4*length, 'white', 'purple')
+    turtle.right(180)
+    leg_triangle(x-1/1.875*length,y-1/8.5*length, 1/4*length, 'white', 'pink')
+    turtle.left(135)
+    square(x-1/1.5*length, y-1/4*length, 1/4*length, 'white', 'orange')
+
+helicopter(0, -175, 150)
+
 
 turtle.done()
 
