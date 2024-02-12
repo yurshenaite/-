@@ -80,5 +80,62 @@ def rectangle(x, y, length, height, line_color, filling_color):
     turtle.right(90)
     turtle.end_fill()
 
+
+def main_square(x, y, length):
+    hypotenuse_triangle(x-0.5*length, y-0.5*length, length, 'white', 'red')
+    turtle.right(90)
+    hypotenuse_triangle(x-0.5*length, y+0.5*length, length, 'white', 'orange')
+    turtle.right(90)
+    hypotenuse_triangle(x+0.5*length, y+0.5*length, 0.5*length, 'white', 'yellow')
+    turtle.right(225)
+    leg_triangle(x, y-0.5*length, 0.5*length, 'white', 'green')
+    square(x, y, (0.5*(0.5*length)**2)**0.5, 'white', 'cyan')
+    turtle.left(135)
+    hypotenuse_triangle(x+0.25*length, y-0.25*length, 0.5*length, 'white', 'blue')
+    turtle.right(90)
+    parallelogram(x-0.5*length, y-0.5*length, 0.5*length, 0.25*length, 'white', 'purple')
+    turtle.right(45)
+main_square(0, 0, 200)
+
+
+def f1_car(x, y, length):
+    turtle.right(45)
+    leg_triangle(x, y, 0.24*length, 'red', 'black')
+    turtle.left(45)
+    square(x+0.24*length,y-0.16*length, 0.16*length, 'black', 'black')
+    turtle.right(45)
+    leg_triangle(x+0.24*length, y, 0.16*length, 'red', 'red')
+    turtle.left(45)
+    rectangle(x+0.4*length, y-0.08*length, 0.32*length, 0.08*length, 'red', 'red')
+    square(x+0.72*length, y-0.16*length, 0.16*length, 'black', 'black')
+    turtle.right(135)
+    leg_triangle(x+0.88*length, y+0.04*length, 0.12*length, 'black', 'red')
+    leg_triangle(x+0.4*length, y+0.16*length, 0.16*length, 'red', 'red')
+    turtle.right(180)
+    leg_triangle(x+0.56*length, y, 0.16*length, 'red', 'black')
+    turtle.right(45)
+    rectangle(x+0.56*length, y, 0.32*length, 0.04*length, 'red', 'red')
+
+f1_car(135, -200, 195)
+
+
+def rabbit(x, y, length):
+    square(x, y, 1/3*length, 'white', 'red')
+    turtle.right(45)
+    leg_triangle(x-2/3*length, y-0.5*length, 2/3*length, 'white', 'orange')
+    turtle.right(180)
+    leg_triangle(x, y-0.5*length, 2/3*length, 'white', 'yellow')
+    turtle.right(135)
+    hypotenuse_triangle(x, y-2/3*length, 1/3*length, 'white', 'green')
+    turtle.right(45)
+    leg_triangle(x-2/3*length, y-7/6*length, 0.5*length, 'white', 'cyan')
+    turtle.right(90)
+    leg_triangle(x-1/6*length, y-5/6*length, 1/3*length, 'white', 'blue')
+    turtle.right(90)
+    parallelogram(x+1/6*length, y+1/3*length, 0.5*length, 1/6*length, 'white', 'purple')
+
+rabbit(-175, 200, 95)
+
+
 turtle.done()
 
